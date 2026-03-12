@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/case-detail.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="btn-back" id="backBtn">&larr; Back</button>
+            <h1 class="header-title">Case Details</h1>
+        </div>
+        <button class="btn-edit" id="editBtn">Edit</button>
+    </header>
+
+    <main class="case-detail-container" id="caseDetailContainer">
+        <div class="loading">Loading case details...</div>
+    </main>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Case</h2>
+                <button class="modal-close" id="closeEditModalBtn">&times;</button>
+            </div>
+            <form id="editCaseForm">
+                <div class="form-group">
+                    <label for="editCaseNumber">Case Number</label>
+                    <input type="text" id="editCaseNumber" name="case_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="editCaseTitle">Title</label>
+                    <input type="text" id="editCaseTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="editClientName">Client Name</label>
+                    <input type="text" id="editClientName" name="client_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editRespondentName">Respondent Name</label>
+                    <input type="text" id="editRespondentName" name="respondent_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editSampleType">Sample Type</label>
+                    <select id="editSampleType" name="sample_type">
+                        <option value="Type1">Type1</option>
+                        <option value="Type2">Type2</option>
+                        <option value="Type3">Type3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editLineOfBusiness">Line of Business</label>
+                    <input type="text" id="editLineOfBusiness" name="line_of_business">
+                </div>
+                <div class="form-group">
+                    <label for="editMarket">Market</label>
+                    <input type="text" id="editMarket" name="market">
+                </div>
+                <div class="form-group">
+                    <label for="editRegion">Region</label>
+                    <input type="text" id="editRegion" name="region">
+                </div>
+                <div class="form-group">
+                    <label for="editClientResponse">Client Response</label>
+                    <textarea id="editClientResponse" name="client_response" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editRespondentResponse">Respondent Response</label>
+                    <textarea id="editRespondentResponse" name="respondent_response" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelEditBtn">Cancel</button>
+                    <button type="submit" class="btn-submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/case-detail.js"></script>
+</body>
+</html>

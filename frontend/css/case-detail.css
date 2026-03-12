@@ -1,0 +1,239 @@
+.case-detail-container {
+    padding: 24px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.case-detail-card {
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detail-section {
+    margin-bottom: 32px;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+.responses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.response-item {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.response-label {
+    font-weight: 600;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.response-text {
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-right: 16px;
+    transition: opacity 0.2s;
+}
+
+.btn-back:hover {
+    opacity: 0.7;
+}
+
+.btn-edit {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #3d5d9a;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(79, 116, 184, 0.2);
+}
+
+.form-group select {
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn-cancel {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+    background-color: #e8e8e8;
+}
+
+.btn-submit {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 24px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #3d5d9a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .case-detail-container {
+        padding: 16px;
+    }
+
+    .case-detail-card {
+        padding: 20px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .btn-edit {
+        align-self: flex-start;
+    }
+}

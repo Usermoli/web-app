@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Cases</h1>
+        <button class="btn-new-case" id="openModalBtn">New Case</button>
+    </header>
+
+    <div class="search-container">
+        <input 
+            type="text" 
+            class="search-input" 
+            id="searchInput" 
+            placeholder="Search cases or clients"
+        >
+    </div>
+
+    <main class="case-grid" id="caseGrid">
+        <!-- Case cards will be dynamically inserted here -->
+    </main>
+
+    <!-- New Case Modal -->
+    <div class="modal" id="caseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Case</h2>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <form id="caseForm">
+                <div class="form-group">
+                    <label for="caseNumber">Case Number</label>
+                    <input type="text" id="caseNumber" name="case_number" required placeholder="e.g., CTO/CTS/9001">
+                </div>
+                <div class="form-group">
+                    <label for="caseTitle">Case Title</label>
+                    <input type="text" id="caseTitle" name="title" required placeholder="e.g., New case">
+                </div>
+                <div class="form-group">
+                    <label for="clientName">Client Name</label>
+                    <input type="text" id="clientName" name="client_name" required placeholder="e.g., John D.">
+                </div>
+                <div class="form-group">
+                    <label for="respondentName">Respondent Name</label>
+                    <input type="text" id="respondentName" name="respondent_name" required placeholder="e.g., Jane R.">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn-submit">Create Case</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
