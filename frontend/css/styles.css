@@ -59,7 +59,6 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px 40px;
-    background-color: var(--white);
     max-width: 1400px;
     margin: 0 auto;
 }
