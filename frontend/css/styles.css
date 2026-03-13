@@ -56,8 +56,12 @@ body {
 
 /* Search Container */
 .search-container {
+    display: flex;
+    justify-content: center;
     padding: 20px 40px;
     background-color: var(--white);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .search-input {
@@ -67,18 +71,14 @@ body {
     font-size: 16px;
     border: 2px solid var(--primary-blue);
     border-radius: 4px;
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--text-dark);
     outline: none;
     transition: box-shadow 0.2s ease;
 }
 
 .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.search-input:focus {
-    box-shadow: 0 0 0 3px rgba(79, 116, 184, 0.3);
+    color: #999999;
 }
 
 /* Case Grid */
